@@ -1,0 +1,23 @@
+<form action="{{ path('fos_user_resetting_reset', {'token': token}) }}" {{ form_enctype(form) }} method="POST" class="fos_user_resetting_reset">
+    {{ form_errors(form) }}
+    <div class="control-group">
+        <label for="form.new.first">{{ 'form.new_password'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="controls">
+            {{ form_errors(form.new.first) }}
+            {{ form_widget(form.new.first, { attr: { class: 'big sonata-medium' } }) }}
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="form.new.second">{{ 'form.password_confirmation'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="controls">
+            {{ form_errors(form.new.second) }}
+            {{ form_widget(form.new.second, { attr: { class: 'big sonata-medium' } }) }}
+        </div>
+    </div>
+
+    {{ form_rest(form) }}
+
+    <div class="form-actions">
+        <input class="btn btn-primary" type="submit" value="{{ 'resetting.reset.submit'|trans({}, 'FOSUserBundle') }}" />
+    </div>
+</form>

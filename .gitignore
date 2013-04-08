@@ -1,0 +1,16 @@
+app/cache
+app/logs
+app/build
+app/*.cache
+web/bundles
+web/uploads
+web/sitemap*.xml
+web/comb/*
+web/js/*
+web/css/*
+
+app/config/parameters*.yml
+vendor
+.idea
+nbproject
+composer.phar

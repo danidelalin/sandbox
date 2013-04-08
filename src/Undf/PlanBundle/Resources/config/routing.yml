@@ -1,0 +1,7 @@
+undf_plan_homepage:
+    pattern:  /
+    defaults: { _controller: UndfPlanBundle:Default:index }
+
+undf_plan_infowindow:
+    pattern:  /infowindow/{stageName}
+    defaults: { _controller: UndfPlanBundle:Default:infoWindow }

@@ -1,0 +1,49 @@
+<div id="fb-root"></div>
+{% if not async %}
+<script type="text/javascript" src="http://connect.facebook.net/{{ culture }}/all.js"></script>
+{% endif %}
+<script type="text/javascript">
+{% autoescape false %}
+{% if async %}
+window.fbAsyncInit = function() {
+{% endif %}
+  FB.init({{ {'appId':appId, 'xfbml':xfbml, 'oauth':oauth, 'status':status, 'cookie':cookie, 'logging':logging }|json_encode }});
+{% if async %}
+  {{ fbAsyncInit }}
+};
+
+(function() {
+  var e = document.createElement('script');
+  e.src = document.location.protocol + {{ "//connect.facebook.net/%s/all.js"|format(culture)|json_encode }};
+  e.async = true;
+  document.getElementById('fb-root').appendChild(e);
+}());
+{% endif %}
+{% endautoescape %}
+
+
+function fb_login(){
+    FB.login(function(response) {
+
+        if (response.authResponse) {
+            console.log('Welcome!  Fetching your information.... ');
+            //console.log(response); // dump complete info
+            access_token = response.authResponse.accessToken; //get access token
+            user_id = response.authResponse.userID; //get FB UID
+
+            FB.api('/me', function(response) {
+                console.log(response)
+                user_email = response.email; //get user email
+          // you can store this data into your database
+            });
+
+        } else {
+            //user hit cancel button
+            console.log('User cancelled login or did not fully authorize.');
+
+        }
+    }, {
+        scope: 'publish_stream,email'
+    });
+}
+</script>

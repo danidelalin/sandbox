@@ -1,0 +1,11 @@
+undf_provinces:
+    pattern:  /getprovinces/{country}
+    defaults: { _controller: UndfLocationDataBundle:Default:getProvincesAndCities, country:null }
+    options:
+        expose: true
+
+undf_cities:
+    pattern:  /getcities/{province}
+    defaults: { _controller: UndfLocationDataBundle:Default:getCities, province:null}
+    options:
+        expose: true

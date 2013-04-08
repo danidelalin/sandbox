@@ -1,0 +1,101 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
+    # User Bundles
+    - { resource: user/fos_user.yml }
+    - { resource: user/fos_fb_user.yml }
+
+    # Sonata Bundles
+    - { resource: sonata/sonata_admin.yml }
+    - { resource: sonata/sonata_block.yml }
+    - { resource: sonata/sonata_media.yml }
+    - { resource: sonata/sonata_formatter.yml }
+    - { resource: sonata/sonata_cache.yml }
+    - { resource: sonata/sonata_notification.yml }
+    - { resource: sonata/sonata_user.yml }
+
+    - { resource: mopa_bootstrap.yml }
+
+    - { resource: media.yml }
+
+    - { resource: translations.yml }
+
+    - { resource: geolocation.yml }
+
+framework:
+    #esi:             ~
+    translator: { fallback: es }
+    secret:          %secret%
+    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    form:            true
+    csrf_protection: true
+    validation:      { enable_annotations: true }
+    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    default_locale:  %locale%
+    session:
+      save_path: %kernel.root_dir%/cache/sessions
+
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+    form:
+        resources:
+            - 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
+            - 'SonataFormatterBundle:Form:formatter.html.twig'
+            - 'MopaBootstrapBundle:Form:fields.html.twig'
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    filters:
+        cssrewrite: ~
+        lessphp:
+            node:     %node%
+            node_paths: [%node_paths%]
+            apply_to: "\.less$"
+        # closure:
+        #     jar: %kernel.root_dir%/java/compiler.jar
+        # yui_css:
+        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection: default
+
+        connections:
+            default:
+                driver:   %database_driver%
+                dbname:   %database_name%
+                user:     %database_user%
+                host:     %database_host%
+                password: %database_password%
+
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        default_entity_manager: default
+
+        entity_managers:
+            default:
+                #metadata_cache_driver: apc
+                #query_cache_driver: apc
+                #result_cache_driver: apc
+                auto_mapping: true
+                mappings: ~
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: %mailer_transport%
+    username:  %mailer_user%
+    password:  %mailer_password%
+
+jms_security_extra:
+    secure_all_services: false

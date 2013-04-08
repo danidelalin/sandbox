@@ -1,0 +1,7 @@
+table tbody tr td > * {
+   width: 100% !important;
+}
+
+table tbody tr td:last-child > .ui-icon {
+   width: 16px !important;
+}

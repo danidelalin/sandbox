@@ -1,0 +1,31 @@
+undf_plan:
+    resource: "@UndfPlanBundle/Resources/config/routing.yml"
+    prefix:   /
+
+undf_media:
+    resource: "@UndfMediaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+undf_admin:
+    resource: "@UndfAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+undf_user:
+    resource: "@UndfUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+undf_demo:
+    resource: "@UndfDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+_imagine:
+    resource: .
+    type:     imagine
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

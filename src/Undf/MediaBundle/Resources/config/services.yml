@@ -1,0 +1,35 @@
+parameters:
+  undf_media.default_profile_image: "%kernel.root_dir%/../web/bundles/undfmedia/images/default-profile.png"
+  liip_imagine.cache.resolver.gaufrette.class: Undf\MediaBundle\Imagine\Cache\Resolver\GaufretteResolver
+
+services:
+  undf_media.image_manager.profile:
+    class: Undf\MediaBundle\Manager\ProfileImageManager
+    arguments:
+      - "@doctrine.orm.default_entity_manager"
+      - "@vich_uploader.storage"
+      - "%undf_media.default_profile_image%"
+      - "@router"
+
+  liip_imagine.data.loader.stream.profile_photos:
+    class: "%liip_imagine.data.loader.stream.class%"
+    arguments:
+      - "@liip_imagine"
+      - 'gaufrette://profile_photos/'
+    tags:
+      - { name: 'liip_imagine.data.loader', loader: 'stream.profile_photos' }
+
+  liip_imagine.cache.resolver.gaufrette:
+    class: %liip_imagine.cache.resolver.gaufrette.class%
+    arguments:
+      - "@gaufrette.cache_filesystem"
+    tags:
+      - { name: liip_imagine.cache.resolver, resolver: gaufrette }
+    calls:
+      - [ setBasePath, [ "%liip_imagine.cache.resolver.base_path%" ] ]
+      - [ setCacheManager, [ "@liip_imagine.cache.manager" ] ]
+
+
+
+
+

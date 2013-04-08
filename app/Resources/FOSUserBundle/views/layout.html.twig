@@ -1,0 +1,124 @@
+{% extends "MopaBootstrapBundle::base_initializr.html.twig" %}
+
+{% set translation_domain = 'FOSUserBundle' %}
+
+{% block html_tag %}
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"  ng-app="user"> <!--<![endif]-->
+{% endblock html_tag %}
+
+{% block head_style %}
+    {# Override this block to add your own files! #}
+    {% stylesheets filter='lessphp,cssrewrite' output="comb/css/output.css"
+        'bundles/sonatajquery/themes/flick/jquery-ui-1.8.16.custom.css'
+        '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+        '@MopaBootstrapBundle/Resources/public/less/eyecon-bootstrap-datepicker.less'
+        'bundles/sonataadmin/css/layout.css'
+        'bundles/sonataadmin/css/colors.css'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+    {# To use this without less use the base_css.html.twig template as your base
+     # Be sure you understand whats going on: have a look into
+     # https://github.com/phiamo/MopaBootstrapBundle/blob/master/Resources/doc/css-vs-less.md
+     #}
+{% endblock head_style %}
+
+{% block head_scripts %}
+    {% javascripts
+        '@MopaBootstrapBundle/Resources/public/js/modernizr-2.5.3-respond-1.1.0.min.js'
+        output='comb/js/head_compiled.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock head_scripts %}
+
+
+{% block body_tag %}
+<body data-spy="scroll" class="sonata-bc sonata-ba-no-side-menu">
+{% endblock body_tag %}
+
+{% block body_start %}
+    {{ parent() }}
+    {% if initializeFacebook is defined %}
+        {{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();'}) }}
+    {% endif %}
+{% endblock body_start %}
+
+{% block navbar %}
+{% endblock navbar %}
+
+{% block header %}
+    <div class="row-fluid">
+        <div class="pull-right">
+            {{ locale_switcher('undf_locale_switcher', null, 'UndfUserBundle::language_switcher.html.twig') }}
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content_row %}
+    <div class="row-fluid">
+        {% block content %}
+        <div class="span12">
+            <div class="connection">
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+            </div>
+        </div>
+        {% endblock content %}
+    </div>
+{% endblock content_row %}
+
+{% block footer %}
+{% endblock footer %}
+
+{% block foot_javascripts %}
+    <script src="{{ asset('bundles/sonataadmin/qtip/jquery.qtip-1.0.0-rc3.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/sonataadmin/jquery/jquery.form.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/sonataadmin/base.js') }}" type="text/javascript"></script>
+    {% if initializeFacebook is defined %}
+        <script src="{{ asset('bundles/undfuser/js/facebook.js') }}" type="text/javascript"></script>
+    {% endif %}
+
+    {% javascripts
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-transition.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-modal.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-dropdown.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-scrollspy.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-tab.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-tooltip.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-popover.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-alert.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-button.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-collapse.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-carousel.js'
+        '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-typeahead.js'
+        '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
+        '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
+        '@MopaBootstrapBundle/Resources/public/js/html5bp_plugins.js'
+        '@MopaBootstrapBundle/Resources/public/js/html5bp_script.js'
+        '@MopaBootstrapBundle/Resources/public/js/eyecon-bootstrap-datepicker.js'
+
+        'bundles/fosjsrouting/js/router.js'
+        'js/fos_js_routes.js'
+
+        '@UndfUserBundle/Resources/public/js/all.undfangular.js'
+        '@UndfUserBundle/Resources/public/js/app.js'
+        filter="angularjs"
+        output='comb/js/output.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="{{ asset('bundles/undfuser/js/facebook.js') }}" type="text/javascript"></script>
+{% endblock foot_javascripts %}
+

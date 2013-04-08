@@ -1,0 +1,4 @@
+<img src="{{stage.city.image|getImageUrl('infowindow')}}"/></br>
+{% if stage.links.count > 0 %}
+<a class="open_fancybox" href="#" style="cursor:pointer" links={{ jsonEncodedLinks }}>Ver links relacionados</a>
+{% endif %}

@@ -1,0 +1,32 @@
+#
+# more information can be found here http://sonata-project.org/bundles/user
+#
+fos_user:
+    db_driver:      orm # can be orm or odm
+    firewall_name:  main
+    user_class:     Application\Sonata\UserBundle\Entity\User
+    service:
+      user_manager: undf_user.user_manager
+
+    group:
+      group_class: Application\Sonata\UserBundle\Entity\Group
+
+    profile:
+      form:
+        type: undf_user_profile
+    change_password:
+      form:
+        type: undf_user_change_password
+    registration:
+      form:
+        type: undf_user_registration
+
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    FOSUserBundle: ~
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~

@@ -1,0 +1,8 @@
+undf_media_profile_default_image:
+    pattern:  /pics/profile/default
+    defaults: { _controller: UndfMediaBundle:ProfileImage:getDefaultProfilePicture }
+
+undf_media_profile_image:
+    pattern:  /pics/profile/{name}
+    defaults: { _controller: UndfMediaBundle:ProfileImage:getProfilePicture }
+

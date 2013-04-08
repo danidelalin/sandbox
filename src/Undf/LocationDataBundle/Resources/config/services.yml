@@ -1,0 +1,51 @@
+parameters:
+  undf_location_data.translation_domain: Sonata
+
+  undf_location_data.admin.city.class: Undf\LocationDataBundle\Admin\CityAdmin
+  undf_location_data.admin.city.entity: Undf\LocationDataBundle\Entity\City
+  undf_location_data.admin.city.controller: SonataAdminBundle:CRUD
+
+  undf_location_data.admin.province.class: Undf\LocationDataBundle\Admin\ProvinceAdmin
+  undf_location_data.admin.province.entity: Undf\LocationDataBundle\Entity\Province
+  undf_location_data.admin.province.controller: SonataAdminBundle:CRUD
+
+  undf_location_data.admin.country.class: Undf\LocationDataBundle\Admin\CountryAdmin
+  undf_location_data.admin.country.entity: Undf\LocationDataBundle\Entity\Country
+  undf_location_data.admin.country.controller: SonataAdminBundle:CRUD
+
+services:
+  undf_location_data.admin.city:
+    class: %undf_location_data.admin.city.class%
+    arguments: [ '', %undf_location_data.admin.city.entity%, %undf_location_data.admin.city.controller% ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, audit: false, group: addresses, label: Ciudades, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    calls:
+      - [ setTranslationDomain, [ %undf_location_data.translation_domain% ] ]
+      - [ setGeocoder, [ "@bazinga_geocoder.geocoder" ] ]
+      - [ setEntityManager, [ "@doctrine.orm.default_entity_manager" ] ]
+
+  undf_location_data.admin.province:
+    class: %undf_location_data.admin.province.class%
+    arguments: [ '', %undf_location_data.admin.province.entity%, %undf_location_data.admin.province.controller% ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, audit: false, group: addresses, label: Provincias, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    calls:
+      - [ setTranslationDomain, [ %undf_location_data.translation_domain% ] ]
+
+  undf_location_data.admin.country:
+    class: %undf_location_data.admin.country.class%
+    arguments: [ '', %undf_location_data.admin.country.entity%, %undf_location_data.admin.country.controller% ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, audit: false, group: addresses, label: Países, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    calls:
+      - [ setTranslationDomain, [ %undf_location_data.translation_domain% ] ]
+
+  undf_location_data.form.chain:
+    class: Undf\LocationDataBundle\Form\Type\ChainType
+    tags:
+      - { name: form.type, alias: chain }
+
+  undf_location_data.form.address:
+    class: Undf\LocationDataBundle\Form\Type\AddressType
+    tags:
+      - { name: form.type, alias: address }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2013-03-04T06:11:47Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="210f8b7cbd19367b2ca1332f3cd00b7a06f7e0a0" resname="form.new_password">
+        <jms:reference-file line="39">Form/Type/ChangePasswordFormType.php</jms:reference-file>
+        <source>form.new_password</source>
+        <target state="new">form.new_password</target>
+      </trans-unit>
+      <trans-unit id="9c550aa2c68f9be72e8c34c90d6c359178ab9a25" resname="form.new_password_confirmation">
+        <jms:reference-file line="40">Form/Type/ChangePasswordFormType.php</jms:reference-file>
+        <source>form.new_password_confirmation</source>
+        <target state="new">form.new_password_confirmation</target>
+      </trans-unit>
+      <trans-unit id="6d384fb8ef3ca9318f0f9d983868842a211770f8" resname="form.password">
+        <jms:reference-file line="39">Form/Type/RegistrationFormType.php</jms:reference-file>
+        <source>form.password</source>
+        <target state="new">form.password</target>
+      </trans-unit>
+      <trans-unit id="30de94712c8550862006ed6a664870c398c9482d" resname="form.password_confirmation">
+        <jms:reference-file line="40">Form/Type/RegistrationFormType.php</jms:reference-file>
+        <source>form.password_confirmation</source>
+        <target state="new">form.password_confirmation</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,9 @@
+parameters:
+#    undf_plan.example.class: Undf\PlanBundle\Example
+
+services:
+  undf_public.twig.cached_globals_extension:
+    class: Undf\PlanBundle\Twig\GlobalsExtension
+    tags:
+      - { name: twig.extension }
+    arguments: [ "@sonata.media.provider.image"]

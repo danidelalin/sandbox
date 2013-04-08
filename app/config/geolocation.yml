@@ -1,0 +1,8 @@
+bazinga_geocoder:
+    fake_ip:    62.83.145.98
+    providers:
+      google_maps:
+        locale: es_ES
+      free_geo_ip: ~
+#      maxmind:
+#        api_key:    mtl9OSaBaL0V

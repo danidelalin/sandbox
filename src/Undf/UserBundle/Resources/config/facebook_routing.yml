@@ -1,0 +1,10 @@
+fb_security_check:
+  pattern:  /fb_login_check
+  options:
+    expose: true
+    i18n: false
+
+fb_security_logout:
+  pattern:  /fb_logout
+  options:
+    expose: true

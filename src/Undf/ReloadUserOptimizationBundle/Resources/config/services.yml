@@ -1,0 +1,20 @@
+parameters:
+  undf_reload_user_optimization.extractor.class: Undf\ReloadUserOptimizationBundle\Extractor\ReloadRoutesExtractor
+  undf_reload_user_optimization.matcher.class: Undf\ReloadUserOptimizationBundle\Matcher\RouteMatcher
+  undf_reload_user_optimization.user_provider.class: Undf\ReloadUserOptimizationBundle\Security\User\Provider\UserProvider
+
+services:
+  undf_reload_user_optimization.extractor:
+    class: %undf_reload_user_optimization.extractor.class%
+    arguments: ["@router", [], "%kernel.bundles%"]
+
+  undf_reload_user_optimization.matcher:
+    class: %undf_reload_user_optimization.matcher.class%
+    arguments: ["@undf_reload_user_optimization.extractor", "@service_container"]
+
+  undf_reload_user_optimization.user_provider:
+    class: %undf_reload_user_optimization.user_provider.class%
+    arguments:
+      userManager: "@fos_user.user_manager"
+      matcher: "@undf_reload_user_optimization.matcher"
+

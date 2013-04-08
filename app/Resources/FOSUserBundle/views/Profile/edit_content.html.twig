@@ -1,0 +1,30 @@
+<form class="form-inline" action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
+
+    <div class="control-group">
+        <u-file-upload class="profile-pic" ng-init="image='{{ profileImageUrl }}';defaultImage='{{ defaultProfileImageUrl }}'" u-file-src="image" u-file-default-src="defaultImage" u-file-name="imageName">
+            <div class="row-fluid">
+                <div class="span3 offset1">
+                    <img class="img-polaroid" ng-src="{{ '{{image}}' |raw }}" src="{{ profileImageUrl }}"/>
+                    {{ form_widget(form.image, { 'attr': {'class' : 'hide'} })}}
+                    {{ form_widget(form.imageName, { 'attr': {'ng-model': 'imageName', 'class' : 'hide'} })}}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <a class="btn" ng-click="uploadFile()">{{ 'profile.picture.upload'|trans({}, 'FOSUserBundle') }}</a>
+                    <a class="btn" ng-click="removePic()">{{ 'profile.picture.remove'|trans({}, 'FOSUserBundle') }}</a>
+                </div>
+            </div>
+        </u-file-upload>
+    </div>
+
+    {{ form_rest(form) }}
+
+    <div class="control-group">
+        <a href="{{ path('fos_user_change_password') }}">{{ 'change_password.submit'|trans({}, 'FOSUserBundle') }}</a>
+    </div>
+
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}" />
+    </div>
+</form>

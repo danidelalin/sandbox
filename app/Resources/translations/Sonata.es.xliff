@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2013-04-08T05:42:23Z" source-language="en" target-language="es" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="404b2fb95ece547bd6099e187a939585ee683f9e" resname="breadcrumb.link_city_batch">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_city_batch</source>
+        <target state="new">breadcrumb.link_city_batch</target>
+      </trans-unit>
+      <trans-unit id="8fd3a8fef41af25d4a2e16fe45d2d4d7c0054f9b" resname="breadcrumb.link_city_create">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_city_create</source>
+        <target>Crear ciudad</target>
+      </trans-unit>
+      <trans-unit id="3181df232f9b81713e16563d96b55a8351bfd2f5" resname="breadcrumb.link_city_delete">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_city_delete</source>
+        <target>Borrar ciudad</target>
+      </trans-unit>
+      <trans-unit id="759d3b1973154425eacc554786e33f9122bd5243" resname="breadcrumb.link_city_edit">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_city_edit</source>
+        <target>Editar ciudad</target>
+      </trans-unit>
+      <trans-unit id="809f625a75d18dac6e803f0b6ce3e7c1b542bf7f" resname="breadcrumb.link_city_list">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_city_list</source>
+        <target>Lista de ciudades</target>
+      </trans-unit>
+      <trans-unit id="78f097830cc6e829f3417d1ff3d4541735ef138b" resname="breadcrumb.link_city_update">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_city_update</source>
+        <target>Actualizar</target>
+      </trans-unit>
+      <trans-unit id="110c453248e8df9e1c9f3a4aca867b0587e76d2f" resname="breadcrumb.link_country_batch">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_country_batch</source>
+        <target state="new">breadcrumb.link_country_batch</target>
+      </trans-unit>
+      <trans-unit id="35ac741177690ffe7243eca68cadaecc5e9b3b51" resname="breadcrumb.link_country_create">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_country_create</source>
+        <target>Crear país</target>
+      </trans-unit>
+      <trans-unit id="863e71a9b94e8e2743c7bb8997dc49408563e696" resname="breadcrumb.link_country_delete">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_country_delete</source>
+        <target>Borrar país</target>
+      </trans-unit>
+      <trans-unit id="811273b7258a6092cf3f80e79a68227cc1567421" resname="breadcrumb.link_country_edit">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_country_edit</source>
+        <target>Editar país</target>
+      </trans-unit>
+      <trans-unit id="892afcb6bcc4c0e84fb5f3225b8ef6e77671de0a" resname="breadcrumb.link_country_list">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_country_list</source>
+        <target>Lista de países</target>
+      </trans-unit>
+      <trans-unit id="b2a2d64e6843984669eb51345a782979c22a400f" resname="breadcrumb.link_country_update">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_country_update</source>
+        <target>Actualizar</target>
+      </trans-unit>
+      <trans-unit id="6616e4d4787a6b08012bc1b29a451ae927e2eb03" resname="breadcrumb.link_dashboard">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_dashboard</source>
+        <target>Inicio</target>
+      </trans-unit>
+      <trans-unit id="01199ef5f37ec97c8c2e15c742dd8a19c31d3d90" resname="breadcrumb.link_link_batch">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_link_batch</source>
+        <target state="new">breadcrumb.link_link_batch</target>
+      </trans-unit>
+      <trans-unit id="a531bd737773f33b4964496ed9a539ecdc4427d5" resname="breadcrumb.link_link_create">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_link_create</source>
+        <target>Crear link</target>
+      </trans-unit>
+      <trans-unit id="934f147aacd3be66e579e83a8d1f3490eac564e1" resname="breadcrumb.link_link_delete">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_link_delete</source>
+        <target>Borrar link</target>
+      </trans-unit>
+      <trans-unit id="1ac5678d5db9e5b29e543d6887d881488888576c" resname="breadcrumb.link_link_edit">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_link_edit</source>
+        <target>Editar link</target>
+      </trans-unit>
+      <trans-unit id="1a118221e2ef2ff573c5fd2e93fe92ba331fc192" resname="breadcrumb.link_link_list">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_link_list</source>
+        <target>Lista de links</target>
+      </trans-unit>
+      <trans-unit id="ab75ec32a69fdd7a761d74b398b657463a5b800f" resname="breadcrumb.link_link_update">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_link_update</source>
+        <target>Actualizar link</target>
+      </trans-unit>
+      <trans-unit id="17a7c5fffb13c6aa09574a15f216577a6dd499f8" resname="breadcrumb.link_plan_batch">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_plan_batch</source>
+        <target state="new">breadcrumb.link_plan_batch</target>
+      </trans-unit>
+      <trans-unit id="5359d463aa1b498faee29329b86abc6418d3bfd8" resname="breadcrumb.link_plan_create">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_plan_create</source>
+        <target>Crear plan</target>
+      </trans-unit>
+      <trans-unit id="ac5e67acb1d090ff6c44844d6470fc4fc8979559" resname="breadcrumb.link_plan_delete">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_plan_delete</source>
+        <target>Borrar plan</target>
+      </trans-unit>
+      <trans-unit id="e9287d3f3f588e3349e7f88a68959152620ff839" resname="breadcrumb.link_plan_edit">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_plan_edit</source>
+        <target>Editar plan</target>
+      </trans-unit>
+      <trans-unit id="f971e84dcd0a840f444b459f2d5ec7c3eae7aee1" resname="breadcrumb.link_plan_list">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_plan_list</source>
+        <target>Lista de planes</target>
+      </trans-unit>
+      <trans-unit id="66de5e64bc3e0ba15f6073fa7bbfd5f0d3f410dc" resname="breadcrumb.link_plan_update">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_plan_update</source>
+        <target>Actualizar plan</target>
+      </trans-unit>
+      <trans-unit id="65c2970db687400e6654b768dfc4483888c2cdde" resname="breadcrumb.link_province_batch">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_province_batch</source>
+        <target state="new">breadcrumb.link_province_batch</target>
+      </trans-unit>
+      <trans-unit id="9672df781cfd9ed315160ded402dd533a6301300" resname="breadcrumb.link_province_create">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_province_create</source>
+        <target>Crear provincia</target>
+      </trans-unit>
+      <trans-unit id="9c18108ba5ef3cf3457554e82de1b01c33b381b3" resname="breadcrumb.link_province_delete">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_province_delete</source>
+        <target>Borrar provincia</target>
+      </trans-unit>
+      <trans-unit id="9be3cf482df904ee59d2f09696d3e480aba55858" resname="breadcrumb.link_province_edit">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_province_edit</source>
+        <target>Editar provincia</target>
+      </trans-unit>
+      <trans-unit id="7b71056e7425571b1820d7676afa487437c35427" resname="breadcrumb.link_province_list">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_province_list</source>
+        <target>Lista de provincias</target>
+      </trans-unit>
+      <trans-unit id="be2a1f3c64c7142ce7a9f244e24b3e894fc1d7cd" resname="breadcrumb.link_province_update">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_province_update</source>
+        <target>Actualizar</target>
+      </trans-unit>
+      <trans-unit id="1298fcb2133e511ecd4e0c623ec3f18c5576e5fc" resname="breadcrumb.link_stage_batch">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_stage_batch</source>
+        <target state="new">breadcrumb.link_stage_batch</target>
+      </trans-unit>
+      <trans-unit id="2f5bc056f232ddb95d7aed72edae4229980e232e" resname="breadcrumb.link_stage_create">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_stage_create</source>
+        <target>Crear etapa</target>
+      </trans-unit>
+      <trans-unit id="3c2555497ab81e14b851a305de3199786ad7ada8" resname="breadcrumb.link_stage_delete">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_stage_delete</source>
+        <target>Borrar etapa</target>
+      </trans-unit>
+      <trans-unit id="f76858555e65d9e02d9a079cd9ba0e12c2fd0e89" resname="breadcrumb.link_stage_edit">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_stage_edit</source>
+        <target>Editar etapa</target>
+      </trans-unit>
+      <trans-unit id="595532ab89d0f4f28eb65c86b2af9e6930b98d1c" resname="breadcrumb.link_stage_list">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_stage_list</source>
+        <target>Lista de etapas</target>
+      </trans-unit>
+      <trans-unit id="eb2656f7966748b69bb311b2ebcc679adcf1242e" resname="breadcrumb.link_stage_update">
+        <jms:reference-file>AdminBundle/Admin/Admin.php</jms:reference-file>
+        <source>breadcrumb.link_stage_update</source>
+        <target>Actualizar etapa</target>
+      </trans-unit>
+      <trans-unit id="19a9fed4624d405a0ff0331fcdb7f618629ca69d" resname="filter.label_cities">
+        <jms:reference-file>DoctrineORMAdminBundle/Builder/DatagridBuilder.php</jms:reference-file>
+        <source>filter.label_cities</source>
+        <target>Ciudades</target>
+      </trans-unit>
+      <trans-unit id="65feeff2ef17754210a6c2360ef77c92cae9667e" resname="filter.label_city">
+        <jms:reference-file>DoctrineORMAdminBundle/Builder/DatagridBuilder.php</jms:reference-file>
+        <source>filter.label_city</source>
+        <target>Ciudad</target>
+      </trans-unit>
+      <trans-unit id="5cba34bb8f376e10897073ab69ac49fd4459144e" resname="filter.label_name">
+        <jms:reference-file>DoctrineORMAdminBundle/Builder/DatagridBuilder.php</jms:reference-file>
+        <source>filter.label_name</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="2a4f504869972607b5b951b95a6123ac7ec96bb9" resname="filter.label_plan">
+        <jms:reference-file>DoctrineORMAdminBundle/Builder/DatagridBuilder.php</jms:reference-file>
+        <source>filter.label_plan</source>
+        <target>Plan</target>
+      </trans-unit>
+      <trans-unit id="9c3ff8cb03e996186aa184a2f09dbe536870fbec" resname="filter.label_stage">
+        <jms:reference-file>DoctrineORMAdminBundle/Builder/DatagridBuilder.php</jms:reference-file>
+        <source>filter.label_stage</source>
+        <target>Etapa</target>
+      </trans-unit>
+      <trans-unit id="211c6cb7e560beabb509ce56f2aaf15a4b9cd0a2" resname="filter.label_url">
+        <jms:reference-file>DoctrineORMAdminBundle/Builder/DatagridBuilder.php</jms:reference-file>
+        <source>filter.label_url</source>
+        <target>Url</target>
+      </trans-unit>
+      <trans-unit id="19d20dc59e517cce2b5fdff3a4b10bbb178613a8" resname="form.label_cities">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_cities</source>
+        <target>Ciudades</target>
+      </trans-unit>
+      <trans-unit id="2d82b644654280aabd49ef0428b6d6f0226b7338" resname="form.label_city">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_city</source>
+        <target>Ciudad</target>
+      </trans-unit>
+      <trans-unit id="e8e893c8850dc76b0341faae0906acf24da8e44e" resname="form.label_code">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_code</source>
+        <target>Código</target>
+      </trans-unit>
+      <trans-unit id="896e947b7bcfe2d734fbe8b0282ac0dad3e741ed" resname="form.label_image">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_image</source>
+        <target>Imagen</target>
+      </trans-unit>
+      <trans-unit id="131339a8efb2ba5663efddaf7feba271ab1449ff" resname="form.label_is_end">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_is_end</source>
+        <target>Fin?</target>
+      </trans-unit>
+      <trans-unit id="b760599b22ef1bbdf54bc777a816b66bcbd51ef8" resname="form.label_is_start">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_is_start</source>
+        <target>Inicio?</target>
+      </trans-unit>
+      <trans-unit id="21a9f4f625e795fbb7238d94dfa97c1d64f407ab" resname="form.label_name">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_name</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="afa4f0eca0bdedf638e4409b4d0a11b7de127534" resname="form.label_position">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_position</source>
+        <target><![CDATA[Posicion</br><i><small>(Arrastrar filas para ordenar)</small></i>]]></target>
+      </trans-unit>
+      <trans-unit id="16192e3cf87591846fc13e8440532a0df75e9370" resname="form.label_provinces">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_provinces</source>
+        <target>Provincias</target>
+      </trans-unit>
+      <trans-unit id="0ad6a57e7f07de77fbfa5f871773905ba99abe65" resname="form.label_stage">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_stage</source>
+        <target>Etapa</target>
+      </trans-unit>
+      <trans-unit id="45036b1aaef48d50cb9b99c7e035801608baae9f" resname="form.label_stages">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_stages</source>
+        <target>Etapas</target>
+      </trans-unit>
+      <trans-unit id="3c9678ffd9ec40b353777b23f0418bb7fc3c1123" resname="form.label_url">
+        <jms:reference-file>AdminBundle/Form/FormMapper.php</jms:reference-file>
+        <source>form.label_url</source>
+        <target>Url</target>
+      </trans-unit>
+      <trans-unit id="35d79437653f8d917bb5515bd4cb5e8fc63c7201" resname="list.label_cities">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_cities</source>
+        <target>Ciudades</target>
+      </trans-unit>
+      <trans-unit id="1e309921acc81163e8fb98e7c9084eaf9da26c95" resname="list.label_city">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_city</source>
+        <target>Ciudad</target>
+      </trans-unit>
+      <trans-unit id="6c847e6aed394db187a151d6ded703ce6fa13b8c" resname="list.label_enabled">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_enabled</source>
+        <target>Habilitada</target>
+      </trans-unit>
+      <trans-unit id="0ddac6dabd4a0ad2d7a1f8175f9ccb8549b184fa" resname="list.label_id">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="8e739a3ac5bbbf141f0197c6b04d013ab198d617" resname="list.label_is_end">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_is_end</source>
+        <target>Fin de ruta</target>
+      </trans-unit>
+      <trans-unit id="ae3ae5212197aef893bc69f02d0045a1ab01d1ba" resname="list.label_is_start">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_is_start</source>
+        <target>Inicio de ruta</target>
+      </trans-unit>
+      <trans-unit id="0b5650a669d4ec6c0b9d04ebf8f514c2f8d1256c" resname="list.label_latitude">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_latitude</source>
+        <target>Latitud</target>
+      </trans-unit>
+      <trans-unit id="47bda23c95000a76dc31b14f5429d9f6396e25f4" resname="list.label_longitude">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_longitude</source>
+        <target>Longitud</target>
+      </trans-unit>
+      <trans-unit id="6ff897b72dbc2db3328a964623cd425f9efdf9ea" resname="list.label_name">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_name</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="5cd783742cbd9440c703100cb78b2a3803a11aa1" resname="list.label_plan">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_plan</source>
+        <target>Plan</target>
+      </trans-unit>
+      <trans-unit id="44ee46bc30f6c7722c77c7ff82b302aaca841c8d" resname="list.label_stage">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_stage</source>
+        <target>Etapa</target>
+      </trans-unit>
+      <trans-unit id="55100ef15c64205f0f5b65c82e131aa94fea8c89" resname="list.label_url">
+        <jms:reference-file>AdminBundle/Datagrid/ListMapper.php</jms:reference-file>
+        <source>list.label_url</source>
+        <target>Url</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

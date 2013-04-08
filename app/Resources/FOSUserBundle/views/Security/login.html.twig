@@ -1,0 +1,43 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% set initializeFacebook = true %}
+
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+    <div class="control-group">
+        <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+
+        <div class="controls">
+            <input type="text" id="username" name="_username" value="{{ last_username }}" class="big sonata-medium"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+
+        <div class="controls">
+            <input type="password" id="password" name="_password" class="big sonata-medium" />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label for="remember_me">
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+            {{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}
+            <a class="pull-right" href="{{ path('fos_user_resetting_request') }}">{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}</a>
+        </label>
+    </div>
+
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+        {{ facebook_login_button({}, 'UndfUserBundle::fbLoginButton.html.twig') }}
+        <a class="btn pull-right" href="{{ path('fos_user_registration_register') }}">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</a>
+    </div>
+</form>
+{% endblock fos_user_content %}

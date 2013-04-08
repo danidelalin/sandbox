@@ -1,0 +1,42 @@
+parameters:
+  liip_imagine.controller.class: Undf\MediaBundle\Controller\ImagineController
+
+vich_uploader:
+    db_driver: orm
+    gaufrette: true
+    storage: vich_uploader.storage.gaufrette
+    mappings:
+        profile_image:
+            upload_destination: profile_photos
+            namer: vich_uploader.namer_uniqid
+
+knp_gaufrette:
+  adapters:
+    profile_photos_adapter:
+      local:
+        directory: %kernel.root_dir%/../web/uploads/profile
+        create: true
+
+    cache_adapter:
+      local:
+        directory: %kernel.root_dir%/../web/media/cache
+        create: true
+
+  filesystems:
+    profile_photos:
+      adapter: profile_photos_adapter
+    cache:
+      adapter: cache_adapter
+
+  stream_wrapper: ~
+
+liip_imagine:
+    driver:               gd
+    filter_sets:
+        profile_photos:
+            path: ~
+            quality: 75
+            data_loader: stream.profile_photos
+            cache: gaufrette
+            filters:
+                resize: { size: [90, 90], mode: inset, cache_type: public, cache_expires: 2 weeks }

@@ -1,0 +1,7 @@
+parameters:
+#    undf_admin.example.class: Undf\AdminBundle\Example
+
+services:
+#    undf_admin.example:
+#        class: %undf_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

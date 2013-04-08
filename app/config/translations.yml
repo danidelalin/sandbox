@@ -1,0 +1,37 @@
+jms_translation:
+  configs:
+    app:
+      dirs: [%kernel.root_dir%, %kernel.root_dir%/../src]
+      output_dir: %kernel.root_dir%/Resources/translations
+      excluded_names: ["*TestCase.php", "*Test.php"]
+      excluded_dirs: [cache, data, logs]
+      domain: [Sonata]
+      keep: true
+      extractors: [sonata_admin]
+
+lunetics_locale:
+  allowed_locales:
+    - es
+    - en
+  guessing_order:
+    - router
+    - query
+    - session
+    - cookie
+    - browser
+  cookie:
+    name: locale
+    set_on_change: true
+  session:
+    variable: locale
+  switcher:
+        use_controller: true                # Must be set to true if you want to use the controller. Defaults to false
+        use_referrer: true                  # Redirect to the origin url from where the switcher was used. Defaults to true
+        redirect_to_route: undf_user_homepage   # This parameter MUST be set. Fallback route if no referrer could be found.
+        redirect_statuscode: 302            # Redirect HTTP status code. Options:  300, 301, 302, 303, 307. Defaults to 302
+
+#Uncomment following lines if you want to include the "_locale" in your routes
+#jms_i18n_routing:
+#  default_locale: es
+#  locales: [es, en]
+#  strategy: prefix_except_default

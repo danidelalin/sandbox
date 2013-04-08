@@ -1,0 +1,37 @@
+parameters:
+  undf_plan.admin.plan.class: Undf\PlanBundle\Admin\PlanAdmin
+  undf_plan.admin.plan.entity: Undf\PlanBundle\Entity\Plan
+  undf_plan.admin.plan.controller: SonataAdminBundle:CRUD
+
+  undf_plan.admin.stage.class: Undf\PlanBundle\Admin\StageAdmin
+  undf_plan.admin.stage.entity: Undf\PlanBundle\Entity\Stage
+  undf_plan.admin.stage.controller: SonataAdminBundle:CRUD
+
+  undf_plan.admin.link.class: Undf\PlanBundle\Admin\LinkAdmin
+  undf_plan.admin.link.entity: Undf\PlanBundle\Entity\Link
+  undf_plan.admin.link.controller: SonataAdminBundle:CRUD
+
+services:
+  undf_plan.admin.plan:
+    class: %undf_plan.admin.plan.class%
+    arguments: [ '', %undf_plan.admin.plan.entity%, %undf_plan.admin.plan.controller% ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, audit: false, label: Planes, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    calls:
+      - [ setTranslationDomain, [ 'Sonata' ] ]
+
+  undf_plan.admin.stage:
+    class: %undf_plan.admin.stage.class%
+    arguments: [ '', %undf_plan.admin.stage.entity%, %undf_plan.admin.stage.controller% ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, audit: false, label: Etapas, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    calls:
+      - [ setTranslationDomain, [ 'Sonata' ] ]
+
+  undf_plan.admin.link:
+    class: %undf_plan.admin.link.class%
+    arguments: [ '', %undf_plan.admin.link.entity%, %undf_plan.admin.link.controller% ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, audit: false, label: Links, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    calls:
+      - [ setTranslationDomain, [ 'Sonata' ] ]
