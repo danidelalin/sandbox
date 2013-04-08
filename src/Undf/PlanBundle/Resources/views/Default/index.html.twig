@@ -361,7 +361,13 @@
 {% block navbar %}
 {% endblock navbar %}
 
-{% block headline %}{{ plan.name }}{% endblock headline %}
+{% block headline %}
+    {{ plan.name }}
+    <span class="pull-right">
+        <a class="fancybox" href="{{ path('admin_undf_plan_plan_edit', { id: plan.id }, true) }}"><small>Añadir Etapa</small></a>
+        <a class="fancybox" href="{{ path('admin_undf_plan_link_create', {}, true) }}"><small>Añadir Link</small></a>
+    </span>
+{% endblock headline %}
 
 {% block body_tag %}
     <body  onload="initialize()">
@@ -439,6 +445,18 @@ Otherwise the regeneration is done on every load in dev more with use_controller
         $(".open_fancybox").live('click',function() {
             $.fancybox.open($.parseJSON($(this).attr('links')));
             return false;
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox")
+                .fancybox({
+                    type: 'iframe',
+                    autoSize : true,
+                    beforeClose : function(data) {
+                        location.reload();
+                    }
+                });
         });
     </script>
 
